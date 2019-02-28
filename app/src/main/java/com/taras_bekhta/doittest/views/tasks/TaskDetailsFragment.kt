@@ -125,16 +125,22 @@ class TaskDetailsFragment : BaseFragment(), DateTimePickerFragment.DateTimeSelec
                         if (response.isSuccessful) {
                             task = response.body()!!.task
                             updateScreen()
-                            AnimationUtil.animateViewChangeScaleFade(detailsProgressBar, detailsLayout)
+                            if(detailsProgressBar != null) {
+                                AnimationUtil.animateViewChangeScaleFade(detailsProgressBar, detailsLayout)
+                            }
                         } else {
-                            showErrorSnackBar(getString(R.string.task_loading_failed), titleTextView)
-                            AnimationUtil.animateViewHide(detailsProgressBar)
+                            if(detailsProgressBar != null) {
+                                showErrorSnackBar(getString(R.string.task_loading_failed), titleTextView)
+                                AnimationUtil.animateViewHide(detailsProgressBar)
+                            }
                         }
                     }
 
                     override fun onFailure(call: Call<AddTaskResponse>, t: Throwable) {
-                        AnimationUtil.animateViewHide(detailsProgressBar)
-                        showErrorSnackBar(getString(R.string.task_loading_failure), titleTextView)
+                        if(detailsProgressBar != null) {
+                            AnimationUtil.animateViewHide(detailsProgressBar)
+                            showErrorSnackBar(getString(R.string.task_loading_failure), titleTextView)
+                        }
                     }
                 }
             )
