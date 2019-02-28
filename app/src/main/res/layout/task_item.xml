@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:padding="@dimen/defaultMargin">
+
+    <TextView
+            android:id="@+id/taskTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/taskTitleSize"
+            android:text="Title"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/defaultMargin"
+            app:layout_constraintTop_toBottomOf="@id/taskTitleTextView"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+        <TextView
+                android:id="@+id/dueDateLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/dueDateSize"
+                android:gravity="center_vertical"
+                android:text="Due to: "/>
+
+        <TextView
+                android:id="@+id/dueDateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/dueDateSize"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:text="02/19/19"/>
+
+        <!--Empty view for layout purposes-->
+        <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        <TextView
+                android:id="@+id/priorityTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dueDateSize"
+                android:gravity="center_vertical"
+                android:layout_weight="3"
+                android:textColor="@color/black"
+                android:drawableLeft="@drawable/ic_arrow_up"
+                android:text="High"/>
+
+    </LinearLayout>
+
+    <ImageView
+            android:id="@+id/goToTaskDetailsImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_arrow_right"
+            android:tint="@color/lightGrey"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

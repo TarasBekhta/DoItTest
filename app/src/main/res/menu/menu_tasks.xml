@@ -1,0 +1,52 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:orderInCategory="2"
+            android:title="@string/sort"
+            android:icon="@drawable/ic_sort"
+            app:showAsAction="always" >
+        <menu>
+            <item
+                    android:id="@+id/action_sort_name"
+                    android:icon="@drawable/ic_sort"
+                    android:title="@string/sort_by_title"
+                    app:iconTint="@color/colorPrimary"
+                    app:showAsAction="always"/>
+            <item
+                    android:id="@+id/action_sort_due_date"
+                    android:icon="@drawable/ic_sort"
+                    android:title="@string/sort_by_date"
+                    app:iconTint="@color/colorPrimary"
+                    app:showAsAction="always"/>
+            <item
+                    android:id="@+id/action_sort_priority"
+                    android:icon="@drawable/ic_sort"
+                    android:title="@string/sort_by_priority"
+                    app:iconTint="@color/colorPrimary"
+                    app:showAsAction="always"/>
+        </menu>
+    </item>
+
+    <item
+            android:orderInCategory="1"
+            android:title="@string/order"
+            android:icon="@drawable/ic_order"
+            app:showAsAction="always">
+        <menu>
+            <item
+                    android:id="@+id/action_order_ascending"
+                    android:icon="@drawable/ic_order"
+                    android:title="@string/sort_ascending"
+                    app:iconTint="@color/colorPrimary"
+                    app:showAsAction="always"/>
+            <item
+                    android:id="@+id/action_order_descending"
+                    android:icon="@drawable/ic_order"
+                    android:title="@string/sort_descending"
+                    app:iconTint="@color/colorPrimary"
+                    app:showAsAction="always"/>
+        </menu>
+    </item>
+
+</menu>

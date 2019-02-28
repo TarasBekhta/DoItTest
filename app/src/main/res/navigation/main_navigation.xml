@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_navigation"
+            app:startDestination="@id/loginFragment">
+
+    <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.taras_bekhta.doittest.views.LoginFragment"
+            android:label="LoginFragment">
+        <action
+                android:id="@+id/action_loginFragment_to_mainFragment"
+                app:destination="@id/mainFragment"
+                app:popUpTo="@+id/loginFragment"
+                app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment
+            android:id="@+id/mainFragment"
+            android:name="com.taras_bekhta.doittest.views.tasks.MainFragment"
+            android:label="fragment_main"
+            tools:layout="@layout/fragment_main">
+        <action
+                android:id="@+id/action_mainFragment_to_editTaskFragment"
+                app:destination="@id/editTaskFragment"/>
+        <action android:id="@+id/action_mainFragment_to_taskDetailsFragment" app:destination="@id/taskDetailsFragment"/>
+    </fragment>
+    <fragment
+            android:id="@+id/editTaskFragment"
+            android:name="com.taras_bekhta.doittest.views.tasks.EditTaskFragment"
+            android:label="fragment_edit_task"
+            tools:layout="@layout/fragment_edit_task">
+        <argument
+                android:name="newTask"
+                app:argType="boolean"
+                app:nullable="false"/>
+        <argument
+                android:name="taskId"
+                app:argType="integer"/>
+    </fragment>
+    <fragment android:id="@+id/taskDetailsFragment"
+              android:name="com.taras_bekhta.doittest.views.tasks.TaskDetailsFragment"
+              android:label="TaskDetailsFragment">
+        <action android:id="@+id/action_taskDetailsFragment_to_editTaskFragment"
+                app:destination="@id/editTaskFragment"/>
+        <argument android:name="taskId" app:argType="integer"/>
+    </fragment>
+</navigation>

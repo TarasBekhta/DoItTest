@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="halfMargin">8dp</dimen>
+    <dimen name="defaultMargin">16dp</dimen>
+    <dimen name="doubleMargin">32dp</dimen>
+
+    <dimen name="signInSize">24sp</dimen>
+    <dimen name="taskTitleSize">18sp</dimen>
+    <dimen name="dueDateSize">12sp</dimen>
+    <dimen name="priorityTextSize">12sp</dimen>
+</resources>
