@@ -7,3 +7,4 @@ Application supports following functionality:
 - Pull to refresh;
 - Sort tasks list, by property with an option to choose ascending/descending order;
 - Create / Edit / Delete a task.
+- Added ability to set/change task due date and time
