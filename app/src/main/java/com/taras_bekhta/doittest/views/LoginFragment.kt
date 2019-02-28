@@ -30,8 +30,8 @@ class LoginFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         //TODO: remove this before release
-        emailEditText.setText("taras.bekhta@gmail.com")
-        passWordEditText.setText("123456")
+//        emailEditText.setText("taras.bekhta@gmail.com")
+//        passWordEditText.setText("123456")
 
         loginRegisterSwitch.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
